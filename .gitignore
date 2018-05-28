@@ -3,3 +3,7 @@
 ################################################################################
 
 /KindoUIDemo/.vs
+*.user
+/KindoUIDemo/KindoUIDemo/obj
+/KindoUIDemo/KindoUIDemo/bin
+*.bak

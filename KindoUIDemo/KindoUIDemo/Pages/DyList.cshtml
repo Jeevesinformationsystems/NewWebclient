@@ -1,0 +1,37 @@
+﻿@page
+@model DyListModel
+@{
+    ViewData["Title"] = "Dev Express Dynamic Object List";
+}
+
+<h2>Product List (Dev Express Dynamic Object)</h2>
+@(
+        Html.DevExtreme().DataGrid().DataSource(Model.products)
+        .Paging(p => p.PageSize(10)).ShowBorders(true).ShowRowLines(true)
+        .Sorting(s => s.Mode(GridSortingMode.Single))
+        .FilterRow(f => {
+            f.Visible(true);
+            f.ShowOperationChooser(true);
+        })
+        .Columns(c =>
+        {
+            foreach(dynamic cell in Model.MyList.MDListColumns)
+            {
+                c.Add().Name(cell.ID).Caption(cell.Name).DataField(cell.ID);
+            }
+        }
+        )
+        .ID((Model.MyList as dynamic).ID)
+        .OnRowClick("OnRowClick")
+)
+
+<br />
+<a asp-page="Index">Home</a>
+ 
+<script type="text/javascript">
+    function OnRowClick(e) {
+        var data = e.data;
+        var productId = data["1"];
+        window.location.replace(document.location.origin + "/DyDetail/index/" + productId);
+    }
+</script>

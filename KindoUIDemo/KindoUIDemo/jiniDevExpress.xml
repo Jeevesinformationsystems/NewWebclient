@@ -1,0 +1,40 @@
+<CProgramWindow Program="jini" Node="a" WindowContext="wjini" Width="1080" ToolbarStyle="Hidden">
+        <CProgramList Title="SEARCH RESULT:" Program="jini" Node="a" WindowContext="wjini" Window="wjinif" MainTable="jini" Id="0">
+            <CListColumn Id="2" Table="jini" Field="grupp" HeaderText="Group" ColumnType="EditBox" ColumnAlignment="Right" LinkedProgramVisible="True" />
+            <CListColumn Id="3" Table="jini" Field="perssign" HeaderText="Sign" ColumnType="EditBox" LinkedProgramVisible="True" />
+            <CListColumn Id="4" Table="jini" Field="paramsection" HeaderText="Parameter section" ColumnType="EditBox" />
+            <CListColumn Id="5" Table="jini" Field="paramentry" HeaderText="Param" ColumnType="EditBox" />
+            <CListColumn Id="6" Table="jini" Field="paramdata" HeaderText="Parameter data" ColumnType="EditBox" />
+            <CListColumn Id="8" Table="jini" Field="regdat" HeaderText="CreDt" ColumnType="EditBox" Readonly="True" />
+            <CListColumn Id="9" Table="jini" Field="rowcreatedby" HeaderText="CreBy" ColumnType="EditBox" Readonly="True" />
+            <CListColumn Id="10" Table="jini" Field="rowcreateddt" HeaderText="CreDtTime" ColumnType="EditBox" Readonly="True" />
+            <CListColumn Id="11" Table="jini" Field="rowupdatedby" HeaderText="UpdBy" ColumnType="EditBox" Readonly="True" />
+            <CListColumn Id="12" Table="jini" Field="rowupdateddt" HeaderText="UpdDtTime" ColumnType="EditBox" Readonly="True" />
+          <CListColumn Id="7" Table="jini" Field="configname" HeaderText="ConfName" ColumnType="EditBox" />
+        </CProgramList>
+        <CProgramForm Program="jini" Node="a" WindowContext="wjini" Window="wjinif" MainTable="jini" Title="Kernel parameters">
+            <CFormLayout>
+                <CFormColumn Width="200">
+                  <CField Type="EditBox" Id="6" Program="jini" Node="a" Table="jini" Field="paramdata" WindowContext="wjini" Window="wjinif" PromptText="Parameter data" />
+                  <CField Type="Date" Id="12" Program="jini" Node="a" Table="jini" Field="rowupdateddt" ReadOnly="True" WindowContext="wjini" Window="wjinif" PromptText="Updated date/time" />
+                  <CField Type="EditBox" Id="5" Program="jini" Node="a" Table="jini" Field="paramentry" WindowContext="wjini" Window="wjinif" PromptText="Ini parameter" />
+                </CFormColumn>
+                <CFormColumn Width="200">
+                  <CField Type="EditBox" Id="4" Program="jini" Node="a" Table="jini" Field="paramsection" WindowContext="wjini" Window="wjinif" PromptText="Parameter section" />
+                  <CField Type="EditBox" Id="9" Program="jini" Node="a" Table="jini" Field="rowcreatedby" ReadOnly="True" WindowContext="wjini" Window="wjinif" PromptText="Created by" />
+                </CFormColumn>
+                <CFormColumn Width="200">
+                  <CField Type="EditBox" Id="3" Program="jini" Node="a" Table="jini" Field="perssign" LinkedProgramVisible="True" WindowContext="wjini" Window="wjinif" PromptText="Signature" />
+                  <CField Type="Date" Id="10" Program="jini" Node="a" Table="jini" Field="rowcreateddt" ReadOnly="True" WindowContext="wjini" Window="wjinif" PromptText="Created date/time" />
+                </CFormColumn>
+                <CFormColumn Width="200">
+                    <CField Type="EditBox" Id="7" Program="jini" Node="a" Table="jini" Field="configname" WindowContext="wjini" Window="wjinif" PromptText="Configuration name" />
+                    <CField Type="EditBox" Id="11" Program="jini" Node="a" Table="jini" Field="rowupdatedby" ReadOnly="True" WindowContext="wjini" Window="wjinif" PromptText="Updated by" />
+                </CFormColumn>
+                <CFormColumn Width="200" SeparatorVisible="False">
+                    <CField Type="EditBox" Id="2" Program="jini" Node="a" Table="jini" Field="grupp" LinkedProgramVisible="True" WindowContext="wjini" Window="wjinif" PromptText="Group" />
+                    <CField Type="Date" Id="8" Program="jini" Node="a" Table="jini" Field="regdat" ReadOnly="True" WindowContext="wjini" Window="wjinif" PromptText="Entry date" />
+                </CFormColumn>
+            </CFormLayout>
+        </CProgramForm>
+</CProgramWindow>

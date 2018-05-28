@@ -1,0 +1,37 @@
+﻿@page
+@model DListModel
+@{
+    ViewData["Title"] = "Dev Express List";
+}
+
+<h2>Product List (Dev Express)</h2>
+@(
+        Html.DevExtreme().DataGrid<Product>().ID("ProductList").DataSource(Model.products)
+        .Paging(p => p.PageSize(10)).ShowBorders(true).ShowRowLines(true)
+        .Sorting(s => s.Mode(GridSortingMode.Single))
+        .FilterRow(f => {
+            f.Visible(true);
+            f.ShowOperationChooser(true);
+            })
+        .Columns(c =>
+        {
+            c.AddFor(p => p.ProductId).Visible(false);
+            c.AddFor(p => p.ProductName).Caption("Product Name");
+            c.AddFor(p => p.UnitPrice).Caption("Unit Price");
+            c.AddFor(p => p.UnitInStock).Caption("Units In Stoke");
+            c.AddFor(p => p.Discontinued).Caption("Discontinued");
+        }
+        )
+        .OnRowClick("OnRowClick")
+)
+
+<br />
+<a asp-page="Index">Home</a>
+ 
+<script type="text/javascript">
+    function OnRowClick(e) {
+        var data = e.data;
+        var productId = data.ProductId;
+        window.location.replace(document.location.origin + "/DDetail/index/" + productId);
+    }
+</script>
