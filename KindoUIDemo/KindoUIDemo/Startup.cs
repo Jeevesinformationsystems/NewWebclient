@@ -24,7 +24,7 @@ namespace KindoUIDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver());
-            services.AddKendo();
+            //services.AddKendo();
             services.AddSingleton<IProductData, ProductData>();
             services.AddSingleton<IListData, ListData>();
         }
@@ -43,7 +43,7 @@ namespace KindoUIDemo
             }
 
             app.UseStaticFiles();
-            app.UseKendo(env);
+            //app.UseKendo(env);
             app.UseMvc();
         }
     }

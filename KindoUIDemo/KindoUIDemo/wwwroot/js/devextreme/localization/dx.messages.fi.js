@@ -1,7 +1,7 @@
 /*!
 * DevExtreme (dx.messages.fi.js)
-* Version: 17.2.7
-* Build date: Fri Mar 16 2018
+* Version: 18.1.3
+* Build date: Tue May 15 2018
 *
 * Copyright (c) 2012 - 2018 Developer Express Inc. ALL RIGHTS RESERVED
 * Read about DevExtreme licensing here: https://js.devexpress.com/Licensing/
@@ -153,6 +153,10 @@
             "dxDataGrid-ariaSearchInGrid": "Hae tietoriviltä",
             "dxDataGrid-ariaSelectAll": "Valitse kaikki",
             "dxDataGrid-ariaSelectRow": "Valitse rivi",
+            "dxDataGrid-filterBuilderPopupTitle": "Suodattimen muodostin",
+            "dxDataGrid-filterPanelCreateFilter": "Luo suodatin",
+            "dxDataGrid-filterPanelClearFilter": "Tyhjennä",
+            "dxDataGrid-filterPanelFilterEnabledHint": "Ota suodatin käyttöön",
             "dxTreeList-ariaTreeList": "Puu",
             "dxTreeList-editingAddRowToNode": "Lisää",
             "dxPager-infoText": "Sivu {0}/{1} ({2} kohdetta)",
@@ -246,7 +250,10 @@
             "dxFilterBuilder-filterOperationNotContains": "Ei sisällä",
             "dxFilterBuilder-filterOperationEndsWith": "Loppuu merkillä",
             "dxFilterBuilder-filterOperationIsBlank": "On tyhjä",
-            "dxFilterBuilder-filterOperationIsNotBlank": "Ei ole tyhjä"
+            "dxFilterBuilder-filterOperationIsNotBlank": "Ei ole tyhjä",
+            "dxFilterBuilder-filterOperationBetween": "Välillä",
+            "dxFilterBuilder-filterOperationAnyOf": "Joku näistä",
+            "dxFilterBuilder-filterOperationNoneOf": "Ei mikään näistä"
         }
     })
 });
