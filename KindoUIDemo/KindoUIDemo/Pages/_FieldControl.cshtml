@@ -1,0 +1,18 @@
+﻿@model MDField
+
+<div>
+    @{
+        switch (Model.ControlType.ToLower())
+        {
+            case "editbox":
+                @Html.DevExtreme().TextBox().ID(Model.ID).Value(Model.Value);
+                break;
+            case "checkbox":
+                @Html.DevExtreme().CheckBox().ID(Model.ID).Value(Model.Value.ToLower() == "true");
+                break;
+            case "date":
+                @Html.DevExtreme().DateBox().ID(Model.ID).Type(DateBoxType.DateTime).Value(DateTime.Now);
+                break;
+        }
+    }
+</div>

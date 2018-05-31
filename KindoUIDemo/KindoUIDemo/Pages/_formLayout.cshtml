@@ -1,0 +1,46 @@
+﻿@model MyDetailModel
+
+
+@(Html.DevExtreme().Form().ID(Model.product["1"])
+                                        .LabelLocation(FormLabelLocation.Top).
+                                        MinColWidth(233).
+                                        ColCount(Mode.Auto)
+                                        .ColCountByScreen(c => c.Lg(Model.mdFormLayout.FormColumnCount)
+                                        .Md(Model.mdFormLayout.FormColumnCount - 1)
+                                        .Sm(Model.mdFormLayout.FormColumnCount - 2).Xs(1)).ScreenByWidth("screenByWidth")
+                                        .CustomizeItem("form_customizeItem")
+                                        .Items(items =>
+                                        {
+                                        foreach (var control in Model.mdFormLayout.FieldList)
+                                        {
+                                            var name = control.Name;
+                                            var fieldControl = control;
+                                            fieldControl.Value = Model.product[control.ID];
+                                            items.AddSimple().Label(l => l.Text(name)).Template(@<text>@Html.Partial("_FieldControl", fieldControl)</text>);
+                                            }
+                                        })
+);
+
+<script>
+    function getFormInstance() {
+        return $("#form").dxForm("instance");
+    }
+
+        function screenByWidth(width) {
+            if (width < 720) {
+                return "xs";
+            }
+            if (width < 1080) {
+                return "sm";
+            }
+            if (width < 1200) {
+                return "md";
+            }
+            return "lg";
+    }
+
+    function form_customizeItem(item) {
+        if(item.dataField == "Notes")
+            item.visible = false;
+    }
+</script>
