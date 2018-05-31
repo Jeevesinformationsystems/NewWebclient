@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>DevExtreme.AspNet.Data</id>
+    <version>1.4.5</version>
+    <authors>Developer Express Inc.</authors>
+    <owners>Developer Express Inc.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/DevExpress/DevExtreme.AspNet.Data/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/DevExpress/DevExtreme.AspNet.Data</projectUrl>
+    <iconUrl>https://secure.gravatar.com/avatar/abb60c275d6f175df3393a6369988c3a?s=128&amp;r=g</iconUrl>
+    <description>DevExtreme data layer extension for ASP.NET</description>
+    <copyright>Copyright (c) Developer Express Inc.</copyright>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="Newtonsoft.Json" version="5.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard1.0">
+        <dependency id="Microsoft.CSharp" version="4.0.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="5.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.ComponentModel.TypeConverter" version="4.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Dynamic.Runtime" version="4.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Expressions" version="4.0.10" exclude="Build,Analyzers" />
+        <dependency id="System.Linq.Queryable" version="4.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.TypeExtensions" version="4.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Text.RegularExpressions" version="4.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.CSharp" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework=".NETFramework4.0" />
+      <frameworkAssembly assemblyName="System" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
