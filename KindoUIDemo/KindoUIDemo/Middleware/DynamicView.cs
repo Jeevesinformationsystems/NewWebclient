@@ -51,7 +51,7 @@ namespace KindoUIDemo.Middleware
                     LastModified = Convert.ToDateTime(DateTime.Now);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // if something went wrong, Exists will be false
             }
