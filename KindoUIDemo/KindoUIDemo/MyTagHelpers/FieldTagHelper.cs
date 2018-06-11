@@ -33,10 +33,13 @@ namespace KindoUIDemo.MyTagHelpers
                 value = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss.fff");
             }
             var lable = "<label>"+ Title + "</label>";
-            var input = "<input class='form-control' type='" + type + "' id='product_" + Id + "_' name='product[" + Id + "]' value='" + value + "' />";
-            
-            output.PreContent.SetHtmlContent(lable);
-            output.PreContent.AppendHtml(input);
+            output.PreElement.SetHtmlContent(lable);
+            output.TagName = "input";
+            output.Attributes.Add("class", "form-control");
+            output.Attributes.Add("type", type);
+            output.Attributes.Add("id", "product_" + Id);
+            output.Attributes.Add("name", "product[" + Id + "]");
+            output.Attributes.Add("value", value);
         }
     }
 }

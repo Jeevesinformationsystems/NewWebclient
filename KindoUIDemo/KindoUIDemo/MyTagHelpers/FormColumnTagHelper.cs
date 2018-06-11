@@ -14,9 +14,8 @@ namespace KindoUIDemo.MyTagHelpers
     {
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            output.TagName = "";
-            output.PreContent.SetHtmlContent("<div class='col-md-3'>");
-            output.PostContent.SetHtmlContent("</div>");
+            output.TagName = "div";
+            output.Attributes.Add("class", "col-md-3");
         }
     }
 }

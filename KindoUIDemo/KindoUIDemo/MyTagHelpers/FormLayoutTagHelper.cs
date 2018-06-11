@@ -14,9 +14,8 @@ namespace KindoUIDemo.MyTagHelpers
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             context.Items["model"] = For.Model;
-            output.TagName = "";
-            output.PreContent.SetHtmlContent("<div class='row'>");
-            output.PostContent.SetHtmlContent("</div>");
+            output.TagName = "div";
+            output.Attributes.Add("class", "row");
         }
     }
 }
