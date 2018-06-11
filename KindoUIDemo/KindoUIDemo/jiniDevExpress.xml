@@ -29,7 +29,7 @@
                 </CFormColumn>
                 <CFormColumn Width="200">
                     <CField Type="EditBox" Id="7" Program="jini" Node="a" Table="jini" Field="configname" WindowContext="wjini" Window="wjinif" PromptText="Configuration name" />
-                    <CField Type="EditBox" Id="11" Program="jini" Node="a" Table="jini" Field="rowupdatedby" ReadOnly="True" WindowContext="wjini" Window="wjinif" PromptText="Updated by" />
+                    <CField Type="Date" Id="11" Program="jini" Node="a" Table="jini" Field="rowupdatedby" ReadOnly="True" WindowContext="wjini" Window="wjinif" PromptText="Updated by" />
                 </CFormColumn>
                 <CFormColumn Width="200" SeparatorVisible="False">
                     <CField Type="EditBox" Id="2" Program="jini" Node="a" Table="jini" Field="grupp" LinkedProgramVisible="True" WindowContext="wjini" Window="wjinif" PromptText="Group" />
