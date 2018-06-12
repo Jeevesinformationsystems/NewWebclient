@@ -1,4 +1,4 @@
-﻿@page "{action=Index}/{id=1}"
+﻿@page "Index/{id=1}"
 @model MyTGDetail
 @{
     ViewData["Title"] = "Detail";
@@ -7,31 +7,7 @@
 <h2>@Model.product["1"] (Dev Express Dictionary)</h2>
 
 
-<form>
-    <form-layout asp-for="product">
-        <form-column>
-            <field  id="6"  prompt-text="Parameter data" type="EditBox" />
-            <field  id="12" prompt-text="Updated date/time" type="Date" />
-            <field  id="5"  prompt-text="Ini parameter" type="EditBox" />
-        </form-column>
-        <form-column>
-            <field  id="4"  prompt-text="Parameter section" type="EditBox" />
-            <field  id="9"  prompt-text="Created by" type="EditBox" />
-        </form-column>
-        <form-column>
-            <field  id="3"  prompt-text="Signature" type="EditBox" />
-            <field  id="10" prompt-text="Created date/time" type="Date" />
-        </form-column>
-        <form-column>
-            <field  id="7"  prompt-text="Configuration name" type="EditBox" />
-            <field  id="11" prompt-text="Updated by" type="Date" />
-        </form-column>
-        <form-column>
-            <field  id="2"  prompt-text="Group" type="EditBox" />
-            <field  id="8"  prompt-text="Entry date" type="Date" />
-        </form-column>
-    </form-layout>
-</form>
+@Html.Partial("_TagHealperFormLayout", Model.product)
 
 <br />
 <div>
