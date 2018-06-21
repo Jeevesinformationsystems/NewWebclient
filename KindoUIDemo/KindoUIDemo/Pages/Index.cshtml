@@ -1,20 +1,35 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Dev Express Dictionary List";
 }
 
-<h2>Home</h2>
+<h2>Product List (Dev Express Dictionary)</h2>
+@(
+        Html.DevExtreme().DataGrid().ID(Model.MDList.ID).DataSource(Model.products)
+        .Paging(p => p.PageSize(10)).ShowBorders(true).ShowRowLines(true)
+        .Sorting(s => s.Mode(GridSortingMode.Single))
+        .FilterRow(f => {
+            f.Visible(true);
+            f.ShowOperationChooser(true);
+        })
+        .Columns(c =>
+        {
+            foreach(var cell in Model.MDList.MDListColumns)
+            {
+               c.AddFor(p => cell.ID).Caption(cell.Name).DataField(cell.ID);
+            }
+        }
+        )
+        .OnRowClick("OnRowClick")
+)
 
-<a asp-page="KList">Kindo</a>
-<br />
-<a asp-page="DList">Dev Express</a>
-<br />
-<a asp-page="DiList">Dev Express Dictionary</a>
-<br />
-<a asp-page="DyList">Dev Express Dynamic Object</a>
 
-
-
-
-
+ 
+<script type="text/javascript">
+    function OnRowClick(e) {
+        var data = e.data;
+        var productId = data["1"];
+        window.location.replace(document.location.origin + "/JeevesDetail/index/" + productId);
+    }
+</script>

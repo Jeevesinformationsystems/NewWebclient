@@ -1,15 +1,14 @@
 ﻿
-@model Dictionary<String, String>
+@model KindoUIDemo.Models.JeevesDetailModel
 
 @{
     ViewData["Title"] = "Detail";
 }
 
-<h2>@Model.["1"] (Dev Express Dictionary)</h2>
-
+<h2>Jeeves Detail</h2>
 
 <form>
-    <form-layout asp-for="@Model">
+    <form-layout asp-for="Data">
         <form-column>
             <field id="6" prompt-text="Parameter data" type="EditBox" />
             <field id="12" prompt-text="Updated date/time" type="Date" />
@@ -34,11 +33,7 @@
     </form-layout>
 </form>
 
-<br />
-<div>
-    <br />
-    <a asp-page="DiList">Back</a>
-</div>
+
 
 
 
